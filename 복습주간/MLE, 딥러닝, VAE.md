@@ -5,7 +5,8 @@
 VAE의 학습을 위해 maximum likelihood 접근법을 택합니다. 즉, $p_\theta (x)$를 maximize하는 $
 \theta$를 찾는 것을 목적으로 하는 것입니다. 이를 식으로 표현하면, 다음과 같은 loglikelihood를 maximize하는 것입니다.
 
-수식사진
+![image](https://github.com/Tech-Interview-Study/Tech-Interview/assets/68782183/075ce3e8-1fd7-4e8f-be22-17270d2f9329)
+
 
 첫 번째 항은 p(x|z)와 q(z|x) 사이의 negative cross entropy와 같다. 그렇기 때문에 이는 encoder와 decoder가 autoencoder처럼 reconstruction을 잘 할 수 있게 만들어주는 error라고 할 수 있기 때문에 reconstruction error라고 부른다.  
 두 번째 항은 posterior q(z|x)와 prior p(z) 간의 KL divergence와 같다. 그렇기 때문에 이는 posterior와 prior가 최대한 비슷하게 만들어주는 error라고 할 수 있고, 이는 VAE가 reconstruction task만 잘 하는 것을 방지하기 때문에 regularization error라고 부른다. 
